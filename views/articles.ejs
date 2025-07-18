@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Articles</title>
+    <link rel="stylesheet" href="/styles-<%=`${theme}`%>.css" />
+</head>
+<body>
+<h1>Make new article</h1>
+<div>
+    <form action="/articles" method="POST">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <button type="submit">Add Article</button>
+    </form>
+</div>
+<h1>Articles:</h1>
+
+<a href="/set-theme/light">Light theme</a>
+<a href="/set-theme/dark">Dark theme</a>
+    <% if (articles && articles.length > 0) { %>
+        <% articles.forEach(article => { %>
+            <div class="article-card">
+                <a href="/articles/<%= article._id %>/edit">Edit</a>
+                <h2><%= article.title %></h2>
+                <p><%= article.author %>...</p>
+                <a href="/articles/<%= article._id %>">Read more</a>
+                <form action="/articles/<%= article._id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Delete this article?')">Delete</button>
+                </form>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>Articles not found</p>
+    <% } %>
+<a href="/logout">Exit</a>
+</body>
+</html>
