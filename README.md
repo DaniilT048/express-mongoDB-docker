@@ -45,7 +45,7 @@ npm install
 ### 3. Create `.env` file
 
 ```env
-MONGO_CONNECTION=mongodb+srv://DaniilT048:6KU.XtFrXmGcEE.@cluster0.p2hfeap.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MONGO_CONNECTION=mongodb+srv://Т=InPM:PasswordInPM.@cluster0.p2hfeap.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 ```
 
 ### 4. Run Docker Compose
