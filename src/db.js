@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const MONGO_CONNECTION = process.env.MONGO_CONNECTION;
+const MONGO_CONNECTION = process.env.MONGO_CONNECTION || 'mongodb://localhost:27017';
 const client = new MongoClient(MONGO_CONNECTION);
 
 export let db;

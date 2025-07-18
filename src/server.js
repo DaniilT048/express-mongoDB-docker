@@ -100,6 +100,10 @@ app.get('/', (req, res) => {
     res.render('index', { theme: res.locals.theme,  email: req.user?.email || null });
 });
 
+app.get('/docker', (req, res) => {
+    res.send('Hello from backend');
+});
+
 app.get('/articles', requireAuth, async (req, res) => {
     try {
         const articles = await getArticles();
