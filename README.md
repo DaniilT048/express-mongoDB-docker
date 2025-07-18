@@ -32,7 +32,7 @@ This project demonstrates a simple Node.js backend connected to a MongoDB databa
 ### 1. Clone the repository
 
 ```bash
-git https://github.com/DaniilT048/express-mongoDB-docker
+git clone https://github.com/DaniilT048/express-mongoDB-docker
 cd express-mongoDB-docker
 ```
 
